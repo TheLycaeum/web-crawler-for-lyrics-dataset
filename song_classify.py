@@ -81,7 +81,7 @@ def main():
     
     data=[]
     labels=[]
-    Path = r"/home/pranjal/Desktop/song_classification" #Path to the data set downloaded by the web crawler
+    Path = r"/home/pranjal/Desktop/song_classification" #Path to the data set downloaded by the web crawler # I don't have this directory on my machine
     filelist = os.listdir(Path)
     for i in range(4):      #taking 1 file each from any 3 categories for text preprocessing
         for j in range(len(os.listdir(Path+"/"+filelist[i]))):
