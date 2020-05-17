@@ -14,8 +14,8 @@ def get_file_name(url):
 
 
 def load_lyrics(name,primarylink):
-    os.mkdir(name)
-    os.chdir(name)
+    os.mkdir(name)  
+    os.chdir(name) # Try to avoid changing directory. Will put you off in case of a crash
     resp = requests.get(primarylink)    
     soup = BeautifulSoup(resp.text, 'html.parser')
     lyrics=soup.find_all("a",attrs={"onmousedown":True})
