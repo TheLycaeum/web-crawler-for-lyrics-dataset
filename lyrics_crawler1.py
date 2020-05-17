@@ -29,7 +29,7 @@ def load_lyrics(name,primarylink):
         l1.append(lyric.get('href'))
     l1=l1[5:105]     #initial links were useless so starting with 5
     
-    TAG_RE = re.compile(r'<[^>]+>') #for removing tags
+    TAG_RE = re.compile(r'<[^>]+>') #for removing tags # Avoid parsing using regexp
     for link in l1:
     
         resp1=requests.get(link)
